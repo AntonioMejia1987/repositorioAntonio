@@ -1,0 +1,147 @@
+:root{
+    --color1: #000000;
+    --color2: #ffffff;
+    --color4: #75b9b3;
+    --color3: #206775;
+    --color5: #ffb85c;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color5);
+}
+
+main{
+    font-size: 16px;
+}
+
+.menu-navegacion{
+    width: 100%;
+    background-color: var(--color3);
+    display: grid;
+    grid-template-columns: 300px 1fr 50px;
+    grid-template-rows: 80px;
+    position: relative;
+}
+
+.menu-navegacion::after{
+    content: '';
+    display: block;
+    border-top: 20px solid var(--color3);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    bottom: -50%;
+    left: calc(50% - 20px);
+}
+
+
+.titulo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+
+}
+
+.tareas{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.tareas li{
+    flex: 0 1 10%;
+
+}
+.tareas li a{
+    text-decoration: none;
+    color: var(--color2);
+    font-family: 'Roboto Slab', serif;
+}
+
+.contenido{
+    width: 90%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: var(--color4);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60vh;
+    position: relative;
+
+}
+
+
+.foto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.foto img{
+    border-radius: 100px;
+}
+
+.bio{
+    padding: 10px;
+    margin: auto;
+      
+}
+
+.contenido::after{
+    content: '';
+    display: block;
+    /* background-color: #000000;
+    height: 40px;
+    width: 40px; */
+
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid var(--color5);
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.contenido::before{
+    content: '';
+    display: block;
+    border-top: 20px solid var(--color5);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    position: absolute;
+    right: calc(50% - 20px);
+}
+
+h3{
+    display: inline;
+}
+
+.bio{
+    padding-left: 10px;
+}
